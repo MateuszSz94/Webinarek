@@ -1,0 +1,86 @@
+PROJEKT SYSTEMU - APLIKACJI WEBINAREK
+
+Słownik pojęć:
+1. Platforma – aplikacja do publikacji webinarów dla zarejestrowanych użytkowników.
+2. Kurs – kurs w postaci webinarów, czyli filmów edukacyjnych dostępnych w aplikacji webowej; webinar może zawierac 1 lub więcej filmów, platforma może obsługiwać 1 lub więcej webinarów.
+3. Webinar – film, video szkoleniowe, wchodzące w zakres danego kursu
+4.Administrator – użytkownik zarządzający platformą.
+5.User – jakikolwiek użytkownik platformy.
+6.Kursant – użytkownik/osoba zapisana na kurs webinarowy .
+
+FUNKCJONALNOŚCI APLIKACJI:
+Aplikacja przeznaczona dla osób biorących udział w kursach webinarowych.
+Administrator ma możliwość dodawania, edytowania i usuwania danych kursanta, przydzielania i odbierania dostępu do danego kursu i webinaru. Administrator dodaje kursy i poszczególne webinary.
+ Użytkownikiem platformy jako kursant może stać się osoba, która dokonała rejestracji na stronie lub została dodana do panelu kursantów przez administratora. Po otrzymaniu dostępu, Kursant może wybierać kursy z listy, a następnie odtwarzać poszczególne webinary (video) bezpośrednio z poziomu aplikacji. Kursant ma możliwość kontaktu z Administratorem, wglądu do swoich danych i zmiany hasła.
+
+
+I. FUNKCJONALNOŚCI KONIECZNE: 
+
+Funkcjonalności po stronie Administratora:
+1.	Logowanie
+2.	Zarządzanie listą/panelem kursantów - dostęp do listy kursantów
+	2.1.	Dodawanie / zatwierdzanie nowych kursantów
+		(Imię, nazwisko, login, hasło, email, zgoda na przetwarzanie danych)
+	2.2.	Usuwanie kursantów
+	2.3.	Edycja standardowa danych kursantów 
+	2.4.	Przydzielanie dostępu do kursów kursantom/odbieranie dostępu do kursów
+	2.5.	Przydzielanie dostępu do webinarów(filmów) kursantom/odbieranie dostępu do webinarów(filmów)
+3.	Zarządzanie panelem kursów
+	3.1.	Dodawanie kursu do panelu / usuwanie kursu
+	3.2.	Dodawanie webinarów do panelu kursu / usuwanie webinarów z panelu kursu
+	3.3.	Odtwarzanie filmu
+
+
+Funkcjonalności po stronie Kursanta:
+1.	Rejestracja 
+2.	Logowanie do panelu kursanta
+	2.1.	Możliwość zmiany hasła
+3.	Dostęp do listy kursów
+	3.1.	Przeglądanie listy kursów
+	3.2.	Wybór danego kursu
+4.	Dostęp do listy webinarów na poziomie danego kursu
+	4.1.	Przeglądanie listy webinarów w ramach kursu
+	4.2.	Odtworzenie danego webinaru
+5.	Dostęp do danych umożliwiających kontakt z administratorem (mail, telefon)
+
+
+
+II. FUNKCJONALNOŚCI, KTÓRE POWINNY BYĆ:
+Wymagania po stronie Administratora:
+1.	Zarządzanie uprawnieniami - przydzielanie uprawnień do administrowania platformą innym userom/rejestracja innych administratorów
+2.	Edycja danych kursantów zgodnie z wymogiem RODO:
+	2.1.	Pseudonimizacja – odwracalne zaszyfrowanie – wymóg RODO
+	2.2.	Anonimizacja – nieodwracalne usuwanie - nadpisywanie pustym rekordem – wymóg RODO
+3.	Publikacja i edycja tematów pomocy – FAQ
+4.	Kontakt z konkretnym kursantem
+	4.1.	Możliwość wysłania wiadomości do kursanta w ramach platformy
+	4.2.	Możliwość odczytania wiadomości od kursanta w ramach platformy
+
+Wymagania po stronie Kursanta:
+1.	Możliwość podglądu i  edycji swoich danych – wymóg RODO
+2.	Dostęp do pomocy – FAQ
+3.	Kontakt z administratorem
+	3.1.	Możliwość wysłania wiadomości do administratora w ramach platformy
+	3.2.	Możliwość odczytania wiadomości od administratora w ramach platformy
+
+
+
+III. FUNKCJONALNOŚCI , KTÓRE BYŁOBY DOBRZE DODAĆ:
+
+ 1. Szata graficzna dopasowana do odbiorcy
+ 2. Logo projektu
+ 3. Po stronie Administratora - możliwość dodawania ogłoszeń widocznych dla wszystkich/ wybranych kursantów
+ 4. Po stronie Administratora - możliwość dodawania podstron/zakładek
+ 5. Po stronie Administratora - możliwość dodawania obrazków, wpisów, plików do pobrania
+ 6. Po stronie Kursanta – możliwość pobierania plików umieszczonych przez Administratora
+ 7. Możliwość komentowania filmów przez kursantów
+ 8. Integracja z systemem płatności 
+	8.1.	po stronie Aministratora: 
+		widoczność płatności ze strony kursanta, 
+		widoczność danych do faktury,
+		informacja o dokonaniu zapłaty z banku. 
+	8.2.	po stronie Kursanta 
+		panel zamówienia, 
+		przekierowanie do modułu np. PayU, 
+		po płatności informacja o dokonaniu zapłaty, 
+		dostęp do faktury.
