@@ -1,0 +1,22 @@
+﻿@model System.Collections.Generic.List<Webinarek.Models.Webinar>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <tbody>
+        @foreach (var webinar in Model)
+        {
+            <tr>
+                <td>@webinar.Title</td>
+                <td>@webinar.Description</td>
+                <td>@webinar.Duration</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

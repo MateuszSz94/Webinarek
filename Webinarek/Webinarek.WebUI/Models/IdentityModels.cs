@@ -3,6 +3,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Webinarek.Models
 {
@@ -24,10 +26,33 @@ namespace Webinarek.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Webinar> Webinars { get; set; }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
     }
+
+    public class MainDBContext : DbContext
+    {
+        public MainDBContext() : base(@"DefaultConnection")
+        { }
+       
+    }
+    public class Webinar
+    {
+        [Column(@"id")]
+        public virtual decimal Id { get; set; }
+
+        [Column(@"tytul")]
+        public virtual string Title { get; set; }
+
+        [Column(@"CzasTrwania")]
+        public virtual DateTime Duration { get; set; }
+
+        [Column(@"opis")]
+        public virtual string Description { get; set; }
+    }
+
 }

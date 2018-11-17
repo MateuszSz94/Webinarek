@@ -1,0 +1,13 @@
+﻿@model Webinarek.Models.Webinar
+
+@{
+    ViewBag.Title = "AddEdit";
+}
+
+<h2>AddEdit</h2>
+<form>
+    @Html.EditorFor(x=>x.Title)
+    @Html.EditorFor(x=>x.Description)
+    @Html.EditorFor(x=>x.Duration)
+</form>
+
