@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Webinarek.Models;
+using Webinarek.Models.Entity;
 
 namespace Webinarek.Controllers
 {
@@ -31,16 +32,49 @@ namespace Webinarek.Controllers
         {
             try
             {
-                var webinar = new Webinar();
+                var webinar = new WebinarViewModel();
                 if (id > 0)
                 {
                     using (var context = ApplicationDbContext.Create())
                     {
                         var tmpWebinar = context.Webinars.FirstOrDefault(x => x.Id == id);
-                        if (context == null)
+                        if (tmpWebinar == null)
                             throw new ArgumentException($@"Webina with id {id} no found");
-                        webinar = tmpWebinar;
+                        webinar = new WebinarViewModel
+                        {
+                            Title = tmpWebinar.Title,
+                            Description = tmpWebinar.Description,
+                            Duration = tmpWebinar.Duration
+                        };
                     }
+                }
+                return View(webinar);
+            }
+            catch (Exception e)
+            {
+                return View("Error");
+            }
+        }
+        [HttpGet]
+        public ActionResult Display(int id)
+        {
+            try
+            {
+                WebinarViewModel webinar = new WebinarViewModel();
+                using (var context = ApplicationDbContext.Create())
+                {
+                    var dbWebinar = context.Webinars.FirstOrDefault(x => x.Id == id);
+                    if (dbWebinar == null)
+                        throw new ArgumentException($@"Webina with id {id} no found");
+                    webinar.Description = dbWebinar.Description;
+                    webinar.Duration = dbWebinar.Duration;
+                    webinar.Title = dbWebinar.Title;
+                    var videoData = new VideoData
+                    {
+                        FileName = dbWebinar.FileName,
+                        MimeType = dbWebinar.MimeType
+                    };
+                    webinar.VideoData = videoData;
                 }
                 return View(webinar);
             }

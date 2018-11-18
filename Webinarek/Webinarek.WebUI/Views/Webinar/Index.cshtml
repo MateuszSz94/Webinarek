@@ -1,4 +1,4 @@
-﻿@model System.Collections.Generic.List<Webinarek.Models.Webinar>
+﻿@model System.Collections.Generic.List<Webinarek.Models.Entity.Webinar>
 
 @{
     ViewBag.Title = "Index";
@@ -7,6 +7,14 @@
 <h2>Index</h2>
 
 <table>
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Opis</th>
+            <th>Czas trwania</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
     <tbody>
         @foreach (var webinar in Model)
         {
@@ -14,6 +22,7 @@
                 <td>@webinar.Title</td>
                 <td>@webinar.Description</td>
                 <td>@webinar.Duration</td>
+                <td><a href="/Webinar/AddEdit/@webinar.Id">Edutyj</a></td>
             </tr>
         }
     </tbody>

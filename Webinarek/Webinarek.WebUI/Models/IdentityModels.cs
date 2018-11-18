@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using Webinarek.Models.Entity;
 
 namespace Webinarek.Models
 {
@@ -40,19 +41,4 @@ namespace Webinarek.Models
         { }
        
     }
-    public class Webinar
-    {
-        [Column(@"id")]
-        public virtual decimal Id { get; set; }
-
-        [Column(@"tytul")]
-        public virtual string Title { get; set; }
-
-        [Column(@"CzasTrwania")]
-        public virtual DateTime Duration { get; set; }
-
-        [Column(@"opis")]
-        public virtual string Description { get; set; }
-    }
-
 }

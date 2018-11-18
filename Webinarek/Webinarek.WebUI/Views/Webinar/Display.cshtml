@@ -1,0 +1,15 @@
+﻿@model Webinarek.Models.WebinarViewModel
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h5>@Model.Title</h5>
+<video width="480" height="320" controls="controls">
+    <source src="/api/video/@Model.VideoData.FileName/@Model.VideoData.MimeType" type="video/mp4">
+</video>
+<p>
+    @Model.Description
+</p>
+
+

@@ -1,13 +1,36 @@
-﻿@model Webinarek.Models.Webinar
+﻿@model Webinarek.Models.WebinarViewModel
 
 @{
     ViewBag.Title = "AddEdit";
 }
-
-<h2>AddEdit</h2>
+<h5>
+    Webinar - edycja
+</h5>
 <form>
-    @Html.EditorFor(x=>x.Title)
-    @Html.EditorFor(x=>x.Description)
-    @Html.EditorFor(x=>x.Duration)
-</form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.Title)
+            </div>
+            @Html.EditorFor(x => x.Title)
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.Description)
+            </div>
+            @Html.EditorFor(x => x.Description)
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.Duration)
+            </div>
 
+            @Html.EditorFor(x => x.Duration)
+        </div>
+        <div class="row">
+            <button type="submit">
+            Zapisz    
+            </button>
+        </div>
+    </div>
+</form>
