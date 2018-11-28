@@ -33,6 +33,12 @@ namespace Webinarek.Models
 
 		public DbSet<Kurs> Kurs { get; set; }
 
+		public DbSet<Student_Lists>Student_Lists { get; set; }
+
+		public DbSet<Skin> Skins { get; set; }
+
+		public DbSet<Student> Students { get; set; }
+
 
 		public static ApplicationDbContext Create()
         {

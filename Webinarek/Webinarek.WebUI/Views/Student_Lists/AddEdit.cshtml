@@ -1,0 +1,45 @@
+﻿@model Webinarek.Models.Student_ListsViewModels
+@{
+           
+
+                ViewBag.Title = "AddEdit";
+}
+
+
+<h5>
+    Lista studentów - edycja
+</h5>
+
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.CourseTime)
+            </div>
+            @Html.EditorFor(x => x.CourseTime)
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.StudentID)
+            </div>
+            @Html.EditorFor(x => x.StudentID)
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.CourseID)
+            </div>
+
+            @Html.EditorFor(x => x.CourseID)
+        </div>
+        <div class="row">
+            <button type="submit">
+                Zapisz
+            </button>
+        </div>
+
+        <div class=" row">
+            <button><a href="/Student_Lists/Index">Wróć</a></button>
+        </div>
+
+    </div>
+</form>

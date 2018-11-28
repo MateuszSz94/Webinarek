@@ -1,0 +1,31 @@
+﻿@model System.Collections.Generic.List<Webinarek.Models.Entity.Skin>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered table-responsive table-hover">
+
+    <thead>
+        <tr>
+            <th>Skórka dla chłopaków</th>
+            <th>Skórka dla dziewczynek</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var skin in Model)
+        {
+
+            <tr>
+                <td>@skin.Male</td>
+                <td>@skin.Female</td>
+              
+                <td><a href="/Skin/AddEdit/@skin.ID">Edytuj</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -6,20 +6,17 @@ using System.Web;
 
 namespace Webinarek.Models.Entity
 {
-	public class Kurs
+	public class Skin
 	{
-
 		[Column(@"id")]
 		public virtual decimal ID { get; set; }
 
-		[Column(@"nazwa")]
-		public virtual string Name { get; set; }
+		[Column(@"skorka_1")]
+		public virtual decimal Male { get; set; }
 
-		[Column(@"kategoria")]
-		public virtual string Category { get; set; }
 
-		[Column(@"opis")]
-		public virtual string Description { get; set; }
+		[Column(@"skorka_2")]
+		public virtual decimal Female { get; set; }
 
 	}
 }

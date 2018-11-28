@@ -1,0 +1,49 @@
+﻿@model Webinarek.Models.StudentViewModel
+@{
+    ViewBag.Title = "AddEdit";
+}
+
+<h2>AddEdit</h2>
+
+
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.FirstName)
+            </div>
+            @Html.EditorFor(x => x.FirstName)
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.Name)
+            </div>
+            @Html.EditorFor(x => x.Name)
+        </div>
+
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.Agreement)
+            </div>
+            @Html.EditorFor(x => x.Agreement)
+        </div>
+
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.SkinID)
+            </div>
+            @Html.EditorFor(x => x.SkinID)
+        </div>
+
+        <div class="row">
+            <button type="submit">
+                Zapisz
+            </button>
+        </div>
+
+        <div class=" row">
+            <button><a href="/Student/Index">Wróć</a></button>
+        </div>
+
+    </div>
+</form>

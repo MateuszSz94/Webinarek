@@ -1,0 +1,32 @@
+﻿@model System.Collections.Generic.List<Webinarek.Models.Entity.Student>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table table-bordered table-responsive table-hover">
+    <thead>
+        <tr>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>Zgoda</th>
+            <th>Skorka</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.FirstName</td>
+                <td>@student.Name</td>
+                <td>@student.Agreement</td>
+                <td>@student.SkinID</td>
+               
+                <td><a href="/Student/AddEdit/@student.ID">Edytuj</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -45,7 +45,7 @@ namespace Webinarek.Controllers
 						{
 
 							KursID = tmpLista_webinarow_w_kursie.KursID,
-							NumerLekcji = tmpLista_webinarow_w_kursie.NumerLekcji,
+							LessonNumber = tmpLista_webinarow_w_kursie.NumerLekcji,
 						    WebinarID = tmpLista_webinarow_w_kursie.WebinarID
 
 					
@@ -73,7 +73,7 @@ namespace Webinarek.Controllers
 					if (dbLista_webinarow_w_kursie == null)
 						throw new ArgumentException($@"Webina with id {id} no found");
 					Lista_webinarow_w_kursie.WebinarID = dbLista_webinarow_w_kursie.WebinarID;
-					Lista_webinarow_w_kursie.NumerLekcji = dbLista_webinarow_w_kursie.NumerLekcji;
+					Lista_webinarow_w_kursie.LessonNumber = dbLista_webinarow_w_kursie.NumerLekcji;
 					Lista_webinarow_w_kursie.KursID = dbLista_webinarow_w_kursie.KursID;
 
 					

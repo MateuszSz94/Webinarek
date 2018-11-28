@@ -1,0 +1,36 @@
+﻿@model Webinarek.Models.SkinViewModel
+
+@{
+    ViewBag.Title = "AddEdit";
+}
+
+<h2>AddEdit</h2>
+
+
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.Male)
+            </div>
+            @Html.EditorFor(x => x.Male)
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                @Html.NameFor(x => x.Female)
+            </div>
+            @Html.EditorFor(x => x.Female)
+        </div>
+        
+        <div class="row">
+            <button type="submit">
+                Zapisz
+            </button>
+        </div>
+
+        <div class=" row">
+            <button><a href="/Skin/Index">Wróć</a></button>
+        </div>
+
+    </div>
+</form>

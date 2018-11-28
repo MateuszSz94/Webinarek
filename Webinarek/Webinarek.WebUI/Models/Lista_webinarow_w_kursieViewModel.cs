@@ -9,7 +9,7 @@ namespace Webinarek.Models
 	public class Lista_webinarow_w_kursieViewModel
 	{
 		[DisplayName("Numer lekcji")]
-		public decimal NumerLekcji { get; set; }
+		public decimal LessonNumber { get; set; }
 
 		[DisplayName("Webinar ID")]
 		public decimal WebinarID { get; set; }

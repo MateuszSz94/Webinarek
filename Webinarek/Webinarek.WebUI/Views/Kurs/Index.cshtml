@@ -4,11 +4,39 @@
 }
 
 <h2>Index</h2>
-@foreach (var kurs in Model)
-{
-    @kurs.Nazwa
-    @kurs.Opis
-    <p>
-        sndjnsajdnsa
-    </p>
-}
+
+
+<table class="table table-bordered table-responsive table-hover">
+
+    <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Opis</th>
+            <th>Kategoria</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var kurs in Model)
+        {
+
+            <tr>
+                <td>@kurs.Name</td>
+                <td>@kurs.Description</td>
+                <td>@kurs.Category</td>
+                <td><a href="/Kurs/Addedit/@kurs.ID">Edytuj</a></td>
+                <!--dodanie edytora -- patrz webinar-->
+            </tr>
+         }
+    </tbody>
+</table>
+
+
+
+
+
+
+
+

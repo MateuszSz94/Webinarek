@@ -8,18 +8,19 @@ using Webinarek.Models.Entity;
 
 namespace Webinarek.Controllers
 {
-    public class KursController : Controller
+    public class SkinController : Controller
     {
-		public ActionResult Index()
-		{
+        // GET: Skin
+        public ActionResult Index()
+        {
 			try
 			{
-				List<Kurs> existingKurss = new List<Kurs>();
+				List<Skin> existingSkins = new List<Skin>();
 				using (var context = ApplicationDbContext.Create())
 				{
-					existingKurss = context.Kurs.ToList();
+					existingSkins = context.Skins.ToList();
 				}
-				return View(existingKurss);
+				return View(existingSkins);
 			}
 			catch (Exception e)
 			{
@@ -27,30 +28,31 @@ namespace Webinarek.Controllers
 			}
 		}
 
+
+
 		[HttpGet]
 		public ActionResult AddEdit(int id)
 		{
 			try
 			{
-				var Kurs = new KursViewModel();
+				var Skins = new SkinViewModel();
 				if (id > 0)
 				{
 					using (var context = ApplicationDbContext.Create())
 					{
-						var tmpKurs = context.Kurs.FirstOrDefault(x => x.ID == id);
-						if (tmpKurs == null)
+						var tmpSkins = context.Skins.FirstOrDefault(x => x.ID == id);
+						if (tmpSkins == null)
 
 							throw new ArgumentException($@"Webina with id {id} no found");
-						Kurs = new KursViewModel
+						Skins = new SkinViewModel
 						{
-							Category = tmpKurs.Category,
-							Name = tmpKurs.Name,
-							//ListaWebinarowWKursie = tmpKurs.ListaWebinarowWKursieID,
-							Description = tmpKurs.Description
+							Male = tmpSkins.Male,
+							Female = tmpSkins.Female
+							//Description = tmpKurs.Description
 						};
 					}
 				}
-				return View(Kurs);
+				return View(Skins);
 			}
 			catch (Exception e)
 			{
@@ -64,22 +66,18 @@ namespace Webinarek.Controllers
 		{
 			try
 			{
-				KursViewModel Kurs = new KursViewModel();
+				SkinViewModel skin = new SkinViewModel();
 				using (var context = ApplicationDbContext.Create())
 				{
-					var dbKurs = context.Kurs.FirstOrDefault(x => x.ID == id);
-					if (dbKurs == null)
+					var dbSkin = context.Skins.FirstOrDefault(x => x.ID == id);
+					if (dbSkin == null)
 						throw new ArgumentException($@"Webina with id {id} no found");
-
-					Kurs.Name = dbKurs.Name;
-					Kurs.Description = dbKurs.Description;
-					//Kurs.ListaWebinarowWKursie = dbKurs.ListaWebinarowWKursieID;
-					Kurs.Category = dbKurs.Category;
-
-
-
+					skin.Male = dbSkin.Male;
+					skin.Female = dbSkin.Female;
+				
+				
 				}
-				return View(Kurs);
+				return View(skin);
 			}
 			catch (Exception e)
 			{

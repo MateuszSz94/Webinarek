@@ -214,6 +214,9 @@
     <Compile Include="Controllers\KursController.cs" />
     <Compile Include="Controllers\Lista_webinarow_w_kursieController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SkinController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\Student_ListsController.cs" />
     <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Controllers\WebinarController.cs" />
     <Compile Include="Global.asax.cs">
@@ -222,11 +225,17 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entity\Kurs.cs" />
     <Compile Include="Models\Entity\Lista_webinarow_w_kursie.cs" />
+    <Compile Include="Models\Entity\Skin.cs" />
+    <Compile Include="Models\Entity\Student.cs" />
+    <Compile Include="Models\Entity\Student_Lists.cs" />
     <Compile Include="Models\Entity\Webinar.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\KursViewModel.cs" />
     <Compile Include="Models\Lista_webinarow_w_kursieViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SkinViewModel.cs" />
+    <Compile Include="Models\StudentViewModel.cs" />
+    <Compile Include="Models\Student_ListsViewModels.cs" />
     <Compile Include="Models\VideoStream.cs" />
     <Compile Include="Models\WebinarViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -293,6 +302,17 @@
     <Content Include="Views\Webinar\AddEdit.cshtml" />
     <Content Include="Views\Webinar\Display.cshtml" />
     <Content Include="Views\Kurs\Index.cshtml" />
+    <Content Include="Views\Kurs\AddEdit.cshtml" />
+    <Content Include="Views\Kurs\Display.cshtml" />
+    <Content Include="Views\Student_Lists\Index.cshtml" />
+    <Content Include="Views\Student_Lists\AddEdit.cshtml" />
+    <Content Include="Views\Skin\Index.cshtml" />
+    <Content Include="Views\Skin\AddEdit.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\AddEdit.cshtml" />
+    <Content Include="Views\Skin\Display.cshtml" />
+    <Content Include="Views\Student\Display.cshtml" />
+    <Content Include="Views\Student_Lists\Display.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
