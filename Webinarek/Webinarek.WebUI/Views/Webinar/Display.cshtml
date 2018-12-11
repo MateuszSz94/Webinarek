@@ -3,13 +3,23 @@
 @{
     ViewBag.Title = "Display";
 }
+<div class="container">
+    <div class="row">
+        <h3>@Model.Title</h3>
+    </div>
+    <div class="row">
+        <video style="margin-left:170px" width="800"controls="controls">
+            <source src="/api/video/@Model.FileName/@Model.MimeType" type="video/mp4">
+        </video>
+    </div>
+    <div class="row">
+        <p>
+            @Model.Description
+        </p>
+    </div>
+</div>
 
-<h5>@Model.Title</h5>
-<video width="480" height="320" controls="controls">
-    <source src="/api/video/@Model.VideoData.FileName/@Model.VideoData.MimeType" type="video/mp4">
-</video>
-<p>
-    @Model.Description
-</p>
+
+
 
 

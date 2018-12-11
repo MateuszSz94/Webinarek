@@ -6,8 +6,12 @@
 <h5>
     Webinar - edycja
 </h5>
-<form>
-    <div class="container">
+<div class="row">
+    @using (Html.BeginForm("AddEdit", "Webinar"))
+    {
+        @Html.HiddenFor(x => x.MimeType)
+        @Html.HiddenFor(x => x.FileName)
+        @Html.HiddenFor(x => x.Id)
         <div class="row">
             <div class="col-md-1">
                 @Html.NameFor(x => x.Title)
@@ -27,15 +31,38 @@
 
             @Html.EditorFor(x => x.Duration)
         </div>
-        <div class="row">
-            <button type="submit">
-            Zapisz    
-            </button>
+        <div class="row" style="margin-top:10px;">
+            <div class="col-md-1">
+                <button type="submit">
+                    Zapisz
+                </button>
+            </div>
+            <div class="col-md-1">
+                <button><a href="/Webinar/Index">Wróć</a></button>
+            </div>
         </div>
 
-       <div class=" row">
-           <button><a href="/Webinar/Index">Wróć</a></button>
-       </div>
+    }
+</div>
+<div class="row" style="margin-top:10px;">
+    @using (Ajax.BeginForm("AddVideoFile", "Webinar", new AjaxOptions { HttpMethod = "POST", OnSuccess = @"SuccessAddedVideo" }, new { enctype = "multipart/form-data" }))
+    {
+     
+        <div class="row">
+            <input type="file" id="file" name="file" />
+        </div>
+        <div class="row" style="margin-top:10px;">
+            <input type="submit" />
+        </div>
+    }
+</div>
+<script>
+    function SuccessAddedVideo(data) {
+        if (data != null && data != '') {
+            $('#FileName').val(data.FileName);
+            $('#MimeType').val(data.MimeType);
+        }
+    }
+</script>
 
-    </div>
-</form>
+

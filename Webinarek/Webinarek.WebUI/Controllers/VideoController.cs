@@ -24,5 +24,11 @@ namespace Webinarek.Controllers
             response.Content = new PushStreamContent(videoStream.WriteToStream, new MediaTypeHeaderValue($@"video/{mimeType}"));
             return response;
         }
+
+        [Route("save"), HttpPost]
+        public void SaveVideo()
+        {
+            var file = HttpContext.Current.Request.Files[0];
+        }
     }
 }

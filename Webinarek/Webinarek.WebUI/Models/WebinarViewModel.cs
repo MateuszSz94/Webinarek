@@ -10,11 +10,13 @@ namespace Webinarek.Models
     {
         [DisplayName("Tytuł")]
         public string Title { get; set; }
+        public int Id { get; set; }
         [DisplayName("Opis")]
         public string Description { get; set; }
         [DisplayName("Czas trwania")]
         public DateTime Duration { get; set; }
-        public VideoData VideoData { get; set; }
+        public string FileName { get; set; }
+        public string MimeType { get; set; }
     }
 
     [Serializable]
