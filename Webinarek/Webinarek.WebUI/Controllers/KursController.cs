@@ -46,7 +46,8 @@ namespace Webinarek.Controllers
 							Category = tmpKurs.Category,
 							Name = tmpKurs.Name,
 							//ListaWebinarowWKursie = tmpKurs.ListaWebinarowWKursieID,
-							Description = tmpKurs.Description
+							Description = tmpKurs.Description,
+                            Id = (int)tmpKurs.ID
 						};
 					}
 				}
@@ -75,7 +76,7 @@ namespace Webinarek.Controllers
 					Kurs.Description = dbKurs.Description;
 					//Kurs.ListaWebinarowWKursie = dbKurs.ListaWebinarowWKursieID;
 					Kurs.Category = dbKurs.Category;
-
+                    Kurs.Id = (int)dbKurs.ID;
 
 
 				}

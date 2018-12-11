@@ -212,7 +212,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KursController.cs" />
-    <Compile Include="Controllers\Lista_webinarow_w_kursieController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SkinController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -231,7 +230,6 @@
     <Compile Include="Models\Entity\Webinar.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\KursViewModel.cs" />
-    <Compile Include="Models\Lista_webinarow_w_kursieViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\SkinViewModel.cs" />
     <Compile Include="Models\StudentViewModel.cs" />
@@ -318,7 +316,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
-    <Folder Include="Views\Lista_webinarow_w_kursie\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

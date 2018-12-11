@@ -19,5 +19,7 @@ namespace Webinarek.Models
 
 		[DisplayName("Lista webinarów  w kursie")]
 		public string ListaWebinarowWKursie { get; set; }
-	}
+
+        public int Id { get; set; }
+    }
 }

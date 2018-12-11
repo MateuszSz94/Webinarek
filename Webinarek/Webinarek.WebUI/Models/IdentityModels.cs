@@ -29,7 +29,7 @@ namespace Webinarek.Models
         }
         public DbSet<Webinar> Webinars { get; set; }
 
-		public DbSet<Lista_webinarow_w_kursie> Lista_webinarow_w_kursies { get; set; }
+		public DbSet<Lista_webinarow_w_kursies> Lista_webinarow_w_kursies { get; set; }
 
 		public DbSet<Kurs> Kurs { get; set; }
 

@@ -25,5 +25,7 @@ namespace Webinarek.Models.Entity
 
         [Column(@"MimeType")]
         public virtual string MimeType { get; set; }
+
+        public virtual List<Lista_webinarow_w_kursies> Kurses { get; set; }
     }
 }

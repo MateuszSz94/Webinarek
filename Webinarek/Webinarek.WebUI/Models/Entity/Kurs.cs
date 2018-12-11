@@ -21,5 +21,7 @@ namespace Webinarek.Models.Entity
 		[Column(@"opis")]
 		public virtual string Description { get; set; }
 
-	}
+        public virtual List<Lista_webinarow_w_kursies> Webinars { get; set; }
+
+    }
 }

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Webinarek.Models.Entity
 {
-	public class Lista_webinarow_w_kursie
+	public class Lista_webinarow_w_kursies
 	{
 
 		[Column(@"id")]
@@ -20,5 +20,9 @@ namespace Webinarek.Models.Entity
 
 		[Column(@"Kurs_id")]
 		public virtual decimal KursID { get; set; }
-	}
+
+        public virtual Kurs Kurs { get; set; }
+
+        public virtual Webinar Webinar { get; set; }
+    }
 }
