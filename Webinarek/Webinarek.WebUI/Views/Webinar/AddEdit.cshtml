@@ -6,7 +6,7 @@
 <h5>
     Webinar - edycja
 </h5>
-<div class="row">
+<div class="row" style="width:300px">
     @using (Html.BeginForm("AddEdit", "Webinar"))
     {
         @Html.HiddenFor(x => x.MimeType)
@@ -44,11 +44,11 @@
 
     }
 </div>
-<div class="row" style="margin-top:10px;">
+<div class="row" style="margin-top:10px; width:300px;">
     @using (Ajax.BeginForm("AddVideoFile", "Webinar", new AjaxOptions { HttpMethod = "POST", OnSuccess = @"SuccessAddedVideo" }, new { enctype = "multipart/form-data" }))
     {
      
-        <div class="row">
+        <div class="row" >
             <input type="file" id="file" name="file" />
         </div>
         <div class="row" style="margin-top:10px;">

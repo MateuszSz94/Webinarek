@@ -8,6 +8,7 @@ using Webinarek.Models.Entity;
 
 namespace Webinarek.Controllers
 {
+    [Authorize]
     public class KursController : Controller
     {
 		public ActionResult Index()

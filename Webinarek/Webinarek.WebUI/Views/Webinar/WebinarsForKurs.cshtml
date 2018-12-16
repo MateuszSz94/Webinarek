@@ -1,0 +1,26 @@
+﻿@model System.Collections.Generic.List<Webinarek.Models.Entity.Webinar>
+
+<table class="table table-bordered table-responsive table-hover">
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Opis</th>
+            <th>Czas trwania</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var webinar in Model)
+        {
+            <tr>
+                <td>@webinar.Title</td>
+                <td>@webinar.Description</td>
+                <td>@webinar.Duration</td>
+                <td>
+                    
+                    <a href="/Webinar/Display/@webinar.Id">Wyświetl</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

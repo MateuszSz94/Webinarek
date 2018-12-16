@@ -1,0 +1,164 @@
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+body {
+    background: url('tlo.jpg') center;
+    background-size: cover;
+    width: 100 vw;
+    height: 100 vh;
+    font-family: sans-serif;
+    color: #2E3192;
+}
+
+span {
+    background-size: cover;
+    background: #4ECDC4;
+    font-weight: bold;
+    color: #fff;
+    border-width: thick;
+    border-radius: 5px 5px 5px 5px;
+}
+
+h1 {
+    padding-top: 10px;
+    float: right;
+    position: relative 20%;
+    margin-right: 10px;
+}
+/* background-color: #f9f9f9;*/
+#frame {
+    border-width: 15px;
+    border-color: #ffff;
+    border-style: solid;
+    height: 80%;
+
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    width: 99%;
+    min-height:400px;
+}
+
+#frame2 {
+    border-width: 15px;
+    border-color: #ffff;
+    border-style: solid;
+    max-width: 60%;
+    height: 100px;
+    border-width: thick;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 5px;
+}
+
+#main-container {
+    width: 99% vw;
+    margin: 0px auto;
+}
+
+#header {
+    width: 100% vw;
+    height:10% vw;
+    padding: 10px;
+}
+
+    #header:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    #header section {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 22px;
+    }
+
+#ikona {
+    float: left;
+    height:60px;
+}
+
+input {
+    display: block;
+    min-width: 100%;
+    height: 6px;
+    padding: 10px;
+    border: solid 1px #BDC7D8;
+    width: 300px;
+    margin-left: 22px;
+}
+
+#kurs {
+    background: url('kurs.png') left;
+    position: relative center;
+    margin-bottom: 10px;
+}
+
+#logo {
+    margin-left: 110px;
+    width: 30%;
+    float: left;
+}
+
+#main-article {
+    float: left;
+    width: 60%;
+    min-height: 685px;
+    margin-top: 10px;
+}
+
+#main-body-container {
+    padding: 10px;
+    margin: 0px auto;
+    width: 83%;
+}
+
+    #main-body-container:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+#menu {
+    height: 10%;
+}
+#menu ul{
+
+margin: 0;
+
+padding: 0;
+
+list-style-type: none;
+
+}
+#menu ul li { display: inline; padding-left:2;}
+
+#sidebar {
+    float: right;
+    width: 32%;
+    min-height: 450px;
+    margin-left: 20px;
+}
+
+#sidebar-header {
+    width: 35%;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 0;
+    float: right;
+}
+
+#slider-article {
+    margin-bottom: 10px;
+}
+
+#footer {
+    width: 100%;
+    /*background-color: #ccc;*/
+    padding: 10px;
+}

@@ -13,14 +13,32 @@ namespace Webinarek.Controllers
     {
         // GET: Webinar
         [Authorize]
-        public ActionResult Index(int id)
+        public ActionResult Index()
         {
             try
             {
                 List<Webinar> existingWebinars = new List<Webinar>();
                 using (var context = ApplicationDbContext.Create())
                 {
-                    existingWebinars = context.Webinars.Where(x=>x.Kurses.Select(a=>a.KursID).Contains(id)).ToList();
+                    existingWebinars = context.Webinars.ToList();
+                }
+                return View(existingWebinars);
+            }
+            catch (Exception e)
+            {
+                return View("Error");
+            }
+        }
+
+        [Authorize]
+        public ActionResult WebinarsForKurs(int id)
+        {
+            try
+            {
+                List<Webinar> existingWebinars = new List<Webinar>();
+                using (var context = ApplicationDbContext.Create())
+                {
+                    existingWebinars = context.Webinars.Where(x => x.Kurses.Select(a => a.KursID).Contains(id)).ToList();
                 }
                 return PartialView(existingWebinars);
             }
