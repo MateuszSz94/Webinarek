@@ -12,29 +12,41 @@
             <div class="col-md-1">
                 @Html.NameFor(x => x.Name)
             </div>
-            @Html.EditorFor(x => x.Name)
+            <div class="col-md-1">
+                @Html.EditorFor(x => x.Name)
+            </div>
         </div>
         <div class="row">
             <div class="col-md-1">
                 @Html.NameFor(x => x.Category)
             </div>
-            @Html.EditorFor(x => x.Category)
+            <div class="col-md-1">
+                @Html.EditorFor(x => x.Category)
+            </div>
         </div>
         <div class="row">
             <div class="col-md-1">
                 @Html.NameFor(x => x.Description)
             </div>
+            <div class="col-md-1">
+                @Html.EditorFor(x => x.Description)
+            </div>
 
-            @Html.EditorFor(x => x.Description)
         </div>
         <div class="row">
-            <button type="submit">
-                Zapisz
-            </button>
+            <div class="col-md-1">
+                <button type="submit">
+                    Zapisz
+                </button>
+            </div>
+            <div class="col-md-1">
+                <button><a href="/Kurs/Index">Wróć</a></button>
+            </div>
+            
+        </div>
+        <div class="row">
+            @{Html.RenderAction("WebinarsForKurs", "Webinar", new { id = Model.Id });}
         </div>
 
-        <div class=" row">
-            <button><a href="/Kurs/Index">Wróć</a></button>
-        </div>
     </div>
 </form>
