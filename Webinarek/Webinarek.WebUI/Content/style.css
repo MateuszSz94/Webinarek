@@ -9,14 +9,15 @@ body {
     width: 100 vw;
     height: 100 vh;
     font-family: sans-serif;
-    color: #2E3192;
+    color: #ffffff;
+    
 }
 
 span {
     background-size: cover;
     background: #4ECDC4;
     font-weight: bold;
-    color: #fff;
+    color:#ffffff;
     border-width: thick;
     border-radius: 5px 5px 5px 5px;
 }
@@ -161,4 +162,9 @@ list-style-type: none;
     width: 100%;
     /*background-color: #ccc;*/
     padding: 10px;
+}
+.register {
+    background-image: button-rejestracja.png;
+    width 100%;
+    height 100%;
 }

@@ -243,9 +243,12 @@
     <Content Include="App_Data\20180118_L1.mp4" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\button-rejestracja.png" />
     <Content Include="Content\ikona-konto1.png" />
     <Content Include="Content\ikona-kursy1.png" />
+    <Content Include="Content\ikona-pomoc1.png" />
     <Content Include="Content\ikona-wyloguj1.png" />
+    <Content Include="Content\ikona-zaloguj1.png" />
     <Content Include="Content\ikonawebinary.png" />
     <Content Include="Content\logo1.png" />
     <Content Include="Content\style.css" />
@@ -275,6 +278,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -287,7 +291,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -321,6 +324,7 @@
     <Content Include="Views\Student\Display.cshtml" />
     <Content Include="Views\Student_Lists\Display.cshtml" />
     <Content Include="Views\Webinar\WebinarsForKurs.cshtml" />
+    <Content Include="Views\Shared\_Layoutdisplay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />

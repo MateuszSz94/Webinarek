@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - platforma dla dzieci</title>
+    <title>@ViewBag.Title - My ASP.NET Application</title>
     <link rel="stylesheet" type="text/css" href="~/Content/style.css"/>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -21,14 +21,10 @@
                 <ul>
                     <li><a href="/Kurs">  <img id="ikona" src="~/Content/ikona-kursy1.png" /></a></li>
                     <li><a href="/Webinar"> <img id="ikona" src="~/Content/ikonawebinary.png" /></a></li>
-                    <li><a href="/Manage"> <img id="ikona" src="~/Content/ikona-konto1.png" /></a></li>
-                    <li><a href="/Home/Contact"> <img id="ikona" src="~/Content/ikona-pomoc1.png" /></a></li>
-                   @* <li><a href="javascript:document.getElementById('logoutForm').submit()"><img id="ikona" src="~/Content/ikona-wyloguj1.png" /></a></li>
-                    *@
-
+                   
                 </ul>
+
             </section>
-          
         </aside>
     </header>
     
@@ -54,7 +50,7 @@
     </div>*@
     <div class="container body-content">
         @RenderBody()
-       
+        <hr />
         <footer>
             @Html.Partial("_LoginPartial")
         </footer>
