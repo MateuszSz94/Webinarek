@@ -401,7 +401,8 @@ hr {
 }
 
 p {
-  margin: 0 0 10px;
+    margin: 0 0 10px;
+    text-align: center;
 }
 
 .lead {
@@ -409,6 +410,8 @@ p {
   font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
+  color:azure;
+  
 }
 
 @media (min-width: 768px) {
@@ -1999,7 +2002,7 @@ textarea.input-lg {
 
 .btn {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 30px 12px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;
@@ -2015,6 +2018,7 @@ textarea.input-lg {
       -ms-user-select: none;
        -o-user-select: none;
           user-select: none;
+          background-color:bisque;
 }
 
 .btn:focus {
@@ -2049,9 +2053,9 @@ fieldset[disabled] .btn {
 }
 
 .btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+    color: #333333;
+    background-color: bisque;
+    border-color: #cccccc;
 }
 
 .btn-default:hover,
@@ -2090,9 +2094,11 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-  color: #ffffff;
-  background-color: #428bca;
-  border-color: #357ebd;
+    color: #ffffff;
+    background: url('button-rejestracja.png') center;
+    width 100%;
+    height 100%;
+    border-color: #357ebd;
 }
 
 .btn-primary:hover,
@@ -2105,11 +2111,11 @@ fieldset[disabled] .btn-default.active {
   border-color: #285e8e;
 }
 
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
-  background-image: none;
-}
+    .btn-primary:active,
+    .btn-primary.active,
+    .open .dropdown-toggle.btn-primary {
+        background-image: button-rejestracja.png;
+    }
 
 .btn-primary.disabled,
 .btn-primary[disabled],
@@ -4934,7 +4940,7 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #eeeeee;
+ 
 }
 
 .jumbotron h1 {
