@@ -89,6 +89,7 @@ namespace Webinarek.Controllers
                         {
                             var newWebinar = new Webinar
                             {
+                                Id = context.Webinars.Max(x=>x.Id)+1,
                                 MimeType = model.MimeType,
                                 Title = model.Title,
                                 FileName = model.FileName,
@@ -96,7 +97,7 @@ namespace Webinarek.Controllers
                                 Duration = model.Duration
                             };
                             context.Webinars.Add(newWebinar);
-                            context.SaveChangesAsync();
+                            context.SaveChanges();
                         }
                         else
                         {

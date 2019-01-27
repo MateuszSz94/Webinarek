@@ -13,54 +13,64 @@
         @Html.HiddenFor(x => x.FileName)
         @Html.HiddenFor(x => x.Id)
         <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-3">
                 @Html.NameFor(x => x.Title)
             </div>
-            @Html.EditorFor(x => x.Title)
-        </div>
-        <div class="row">
-            <div class="col-md-1">
-                @Html.NameFor(x => x.Description)
-            </div>
-            @Html.EditorFor(x => x.Description)
-        </div>
-        <div class="row">
-            <div class="col-md-1">
-                @Html.NameFor(x => x.Duration)
+            <div class="col-md-3">
+                @Html.EditorFor(x => x.Title)
             </div>
 
-            @Html.EditorFor(x => x.Duration)
         </div>
-        <div class="row" style="margin-top:10px;">
-            <div class="col-md-1">
+        <div class="row">
+            <div class="col-md-3">
+                @Html.NameFor(x => x.Description)
+            </div>
+            <div class="col-md-3">
+                @Html.TextAreaFor(x => x.Description)
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
                 <button type="submit">
                     Zapisz
                 </button>
             </div>
-            <div class="col-md-1">
+            <div class="col-md-3">
                 <button><a href="/Webinar/Index">Wróć</a></button>
             </div>
         </div>
 
     }
 </div>
-<div class="row" style="margin-top:10px; width:300px;">
-    @using (Ajax.BeginForm("AddVideoFile", "Webinar", new AjaxOptions { HttpMethod = "POST", OnSuccess = @"SuccessAddedVideo" }, new { enctype = "multipart/form-data" }))
+<div class="row" style="padding-bottom:10px">
+
+    @using (Ajax.BeginForm("AddVideoFile", "Webinar", new AjaxOptions { HttpMethod = "POST", OnSuccess = @"SuccessAddedVideo", OnBegin=@"StartUploading" }, new { enctype = "multipart/form-data" }))
     {
-     
-        <div class="row" >
-            <input type="file" id="file" name="file" />
+
+        <div class="col-md-3">
+            <input style="height:40px" type="file" id="file" name="file" />
         </div>
-        <div class="row" style="margin-top:10px;">
-            <input type="submit" />
-        </div>
+            <div class="col-md-3">
+                <input style="height:40px" type="submit" id="upload-video" />
+            </div>
     }
 </div>
+<div class="row">
+    <span id="video-status"></span>
+</div>
 <script>
+    function StartUploading() {
+        $("#upload-video").attr('disabled');
+        $("#video-status").text('Dodawanie...');
+    }
     function SuccessAddedVideo(data) {
         if (data != null && data != '') {
             $('#FileName').val(data.FileName);
             $('#MimeType').val(data.MimeType);
+            $("#upload-video").removeAttr('disable');
+            $("#video-status").text('');
         }
     }
 </script>
