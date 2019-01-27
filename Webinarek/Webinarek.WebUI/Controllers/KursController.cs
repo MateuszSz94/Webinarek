@@ -60,8 +60,56 @@ namespace Webinarek.Controllers
 			}
 		}
 
+        [HttpPost]
+        public ActionResult AddEdit(KursViewModel model)
+        {
+            try
+            {
+                if (model != null)
+                {
+                    using (var context = ApplicationDbContext.Create())
+                    {
+                        if (model.Id == 0)
+                        {
+                            var webinars = context.Webinars.OrderByDescending(x => x.Id).Select(x => x.Id).FirstOrDefault();
+                            var newWebinar = new Kurs
+                            {
+                                ID = context.Kurs.Max(x => x.ID) + 1,
+                                Category = model.Category,
+                                Name = model.Name,
+                                Description = model.Description,
+                            };
+                            var kursWebConnection = new Lista_webinarow_w_kursies
+                            {
+                                KursID = newWebinar.ID,
+                                WebinarID = webinars,
+                                NumerLekcji = 1,
+                                ID = context.Lista_webinarow_w_kursies.Max(x => x.ID) + 1
+                            };
+                            context.Kurs.Add(newWebinar);
+                            context.Lista_webinarow_w_kursies.Add(kursWebConnection);
+                            context.SaveChanges();
+                        }
+                        else
+                        {
+                            var webinar = context.Kurs.First(x => x.ID == model.Id);
+                            webinar.Name = model.Name;
+                            webinar.Category = model.Category;
+                            webinar.Description = model.Description;
+                            context.SaveChanges();
+                        }
+                    }
+                }
+                return RedirectToAction("Index");
+            }
+            catch (Exception e)
+            {
+                return View("Error");
+            }
+        }
 
-		[HttpGet]
+
+        [HttpGet]
 		public ActionResult Display(int id)
 		{
 			try
