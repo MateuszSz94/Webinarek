@@ -6,11 +6,11 @@
 body {
     background: url('tlo.jpg') center;
     background-size: cover;
-    width: 100 vw;
-    height: 100 vh;
+    width: 100vw;
+    height: 100vh;
     font-family: sans-serif;
-    color: #ffffff;
-    
+    color: #fff;
+   
 }
 
 span {
@@ -27,6 +27,7 @@ h1 {
     float: right;
     position: relative 20%;
     margin-right: 10px;
+    color:#fff;
 }
 /* background-color: #f9f9f9;*/
 #frame {
@@ -55,12 +56,14 @@ h1 {
 #main-container {
     width: 99% vw;
     margin: 0px auto;
+    color:#fff;
 }
 
 #header {
     width: 100% vw;
     height:10% vw;
     padding: 10px;
+    padding-bottom: 80px;
 }
 
     #header:after {
@@ -115,6 +118,7 @@ input {
     padding: 10px;
     margin: 0px auto;
     width: 83%;
+    color:#fff;
 }
 
     #main-body-container:after {
@@ -123,6 +127,7 @@ input {
         height: 0;
         clear: both;
         visibility: hidden;
+        color: #fff;
     }
 
 #menu {
@@ -162,6 +167,7 @@ list-style-type: none;
     width: 100%;
     /*background-color: #ccc;*/
     padding: 10px;
+  
 }
 .register {
     background-image: button-rejestracja.png;

@@ -241,12 +241,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\20180118_L1.mp4" />
+    <Content Include="App_Data\Atoms - 13232.mp4" />
+    <Content Include="App_Data\Baboon - 17644.mp4" />
+    <Content Include="App_Data\Video_1546280940.wmv" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\button-rejestracja.png" />
     <Content Include="Content\ikona-konto1.png" />
     <Content Include="Content\ikona-kursy1.png" />
     <Content Include="Content\ikona-pomoc1.png" />
+    <Content Include="Content\ikona-webinary1.png" />
     <Content Include="Content\ikona-wyloguj1.png" />
     <Content Include="Content\ikona-zaloguj1.png" />
     <Content Include="Content\ikonawebinary.png" />
@@ -324,7 +328,8 @@
     <Content Include="Views\Student\Display.cshtml" />
     <Content Include="Views\Student_Lists\Display.cshtml" />
     <Content Include="Views\Webinar\WebinarsForKurs.cshtml" />
-    <Content Include="Views\Shared\_Layoutdisplay.cshtml" />
+    <Content Include="Views\Shared\_LayoutDisplay.cshtml" />
+    <Content Include="Views\Shared\_LayoutAfterLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
